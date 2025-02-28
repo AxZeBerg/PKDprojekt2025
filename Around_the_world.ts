@@ -9,6 +9,17 @@ import {
 import * as PromptSync from "prompt-sync";
 const prompt: PromptSync.Prompt = PromptSync({ sigint: true });
 
+
+//tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
+function shuffleArray<T>(array: T[]):T[] { 
+    for (let i = array.length - 1; i > 0; i--) { 
+      const j = Math.floor(Math.random() * (i + 1)); 
+      [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+  }
+
+
 function getRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
 }
@@ -28,6 +39,30 @@ function menu() {
         hints(currentcountry);
     }
 }
+
+function country_questions(generator: Country) {
+    const frågor = shuffleArray(generator.section2);
+    let point: number = 0
+    for(let i = 0; i < 3; i = i + 1) {
+        console.log(head(generator.section2[i]));
+        let input = prompt("what is your answer? ").toLocaleLowerCase();
+        if (input === tail(generator.section2[i])) {
+            console.log("Correct!!");
+            point = point + 1;
+        }
+        else {
+            console.log("incorrect");
+        }
+
+    };
+    if (point === 3) {
+        console.log("you got all 3 questions right, you get a bonus point");
+        point = point + 1;
+        return point;
+    }
+    else{}
+}
+
 
 function make_leaderboard() {
     let array_length = currentcountry.players.length
@@ -64,11 +99,13 @@ function hints(generator: Country) {
                 if(answer === generator.name.toLowerCase()) {
                     console.log("Correct, well done!");
                     console.log("Now you will answer questions about the country");
+                    country_questions(generator);
                     break;
                 //call section 2 function
                 } else {
                     console.log("Incorrect, better luck next time")
                     console.log("Now you will answer questions about the country")
+                    country_questions(generator);
                     break;
                 }
             } else {
@@ -81,10 +118,12 @@ function hints(generator: Country) {
             if(answer === generator.name.toLowerCase()) {
                 console.log("Correct, well done!");
                 console.log("Now you will answer questions about the country");
+                country_questions(generator);
                 break;
             } else {
                 console.log("Incorrect, better luck next time")
                 console.log("Now you will answer questions about the country")
+                country_questions(generator);
                 break;
             }
         }
