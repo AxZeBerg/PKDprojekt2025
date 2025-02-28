@@ -2,12 +2,13 @@ import {
     pair, Pair
 } from "../PKDprojekt2025/lib/list";
     
-    
-const Hints10_Sweden = ["This country had around 593 billion USD BNP last year"];
-const Hints8_Sweden = ["Women could vote in this country 1919"];
-const Hints6_Sweden = ["The largest lake in this country is called Vänern"];
-const Hints4_Sweden = ["Zlatan Ibrahimovic was born in this country"];
-const Hints2_Sweden = ["Stockholm is the capital of this country"];
+import {
+    Hints10_Sweden, Hints8_Sweden, Hints6_Sweden, Hints4_Sweden, Hints2_Sweden, Questions_Sweden,
+    Hints10_Germany, Hints8_Germany, Hints6_Germany, Hints4_Germany, Hints2_Germany, Questions_Germany,
+    Hints10_NewZealand, Hints8_NewZealand, Hints6_NewZealand, Hints4_NewZealand, Hints2_NewZealand, Questions_NewZealand
+} from "../PKDprojekt2025/questions_hints";
+
+
  
 export type Country = {
     name: string
@@ -20,17 +21,25 @@ export type Country = {
 export const Sweden: Country = {
     name: "Sweden",
     section1: [Hints10_Sweden, Hints8_Sweden, Hints6_Sweden, Hints4_Sweden, Hints2_Sweden],
-    section2: [pair("fråga", "svar"), pair("fråga", "svar"), pair("fråga", "svar")],
+    section2: Questions_Sweden,
     players: [pair("Albert", 0)],
     leaderboard: []
 };
     
-export const Tyskland: Country = {
-    name: "Tyskland",
-    section1: [[], [], [], []],
-    section2: [pair("fråga", "svar"), pair("fråga", "svar"), pair("fråga", "svar")],
+export const Germany: Country = {
+    name: "Germany",
+    section1: [Hints10_Germany, Hints8_Germany, Hints6_Germany, Hints4_Germany, Hints2_Germany],
+    section2: Questions_Germany,
+    players: [pair("Albert", 16), pair("Ida", 14), pair("axeL", 3)],
+    leaderboard: ["Albert", "Ida", "axeL"]
+};
+
+export const New_Zealand: Country = {
+    name: "New Zealand",
+    section1: [Hints10_NewZealand, Hints8_NewZealand, Hints6_NewZealand, Hints4_NewZealand, Hints2_NewZealand],
+    section2: Questions_NewZealand,
     players: [pair("Albert", 16), pair("Ida", 14), pair("axeL", 3)],
     leaderboard: ["Albert", "Ida", "axeL"]
 };
     
-export const Array_countries: Array<Country> = [Sweden, Tyskland];
+export const Array_countries: Array<Country> = [Sweden, Germany];

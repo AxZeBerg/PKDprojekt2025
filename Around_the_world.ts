@@ -25,7 +25,7 @@ function getRandomInt(max: number): number {
 }
     
 function generate_country(countries: Array<Country>): Country {
-    const Random_Country = getRandomInt(1);
+    const Random_Country = getRandomInt(2);
     return Array_countries[Random_Country]
 }
 
@@ -33,8 +33,9 @@ let currentcountry = generate_country(Array_countries);
 
 // funktion för att starta spelet 
 function menu() {
-    console.log("Welcome to Around the world!");
+    console.log("Welcome to Around the world!\n");
     let input = prompt("Are you ready to play? (yes/no): ");
+    console.log("");
     if (input === "yes") {
         hints(currentcountry);
     }
@@ -45,7 +46,7 @@ function country_questions(generator: Country) {
     let point: number = 0
     for(let i = 0; i < 3; i = i + 1) {
         console.log(head(generator.section2[i]));
-        let input = prompt("what is your answer? ").toLocaleLowerCase();
+        let input = prompt("What is your answer? ").toLocaleLowerCase();
         if (input === tail(generator.section2[i])) {
             console.log("Correct!!");
             point = point + 1;
@@ -86,25 +87,27 @@ function make_leaderboard() {
 
 function hints(generator: Country) {
     let user = prompt("What’s your name? ");
+    console.log("");
     let points = 10;
     const hint_array: Array<Array<String>> = generator.section1
     for(let i = 0; i < 5; i = i + 1) {
-        let random_hint = getRandomInt(1)
+        let random_hint = getRandomInt(4);
         console.log(hint_array[i][random_hint]);
+        console.log("");
         if (i < 4) {
             console.log("Do you wish to answer?")
             const input = prompt("Yes or No: ").toLowerCase();
             if (input === "yes") {
                 const answer = prompt("What country do you think it is? ").toLowerCase();
                 if(answer === generator.name.toLowerCase()) {
-                    console.log("Correct, well done!");
-                    console.log("Now you will answer questions about the country");
+                    console.log("Correct, well done!\n");
+                    console.log("Now you will answer questions about the country\n");
                     country_questions(generator);
                     break;
                 //call section 2 function
                 } else {
                     console.log("Incorrect, better luck next time")
-                    console.log("Now you will answer questions about the country")
+                    console.log("Now you will answer questions about the country!\n")
                     country_questions(generator);
                     break;
                 }
@@ -113,16 +116,16 @@ function hints(generator: Country) {
                 console.log(`Here comes the next clue worth ${points} points!`);
             }
         } else {
-            console.log("This is the last clue so you have to answer");
+            console.log("This is the last clue so you have to answer!");
             const answer = prompt("What country do you think it is? ").toLowerCase();
             if(answer === generator.name.toLowerCase()) {
-                console.log("Correct, well done!");
-                console.log("Now you will answer questions about the country");
+                console.log("Correct, well done!\n");
+                console.log("Now you will answer questions about the country\n");
                 country_questions(generator);
                 break;
             } else {
-                console.log("Incorrect, better luck next time")
-                console.log("Now you will answer questions about the country")
+                console.log("Incorrect, better luck next time\n")
+                console.log("Now you will answer questions about the country\n")
                 country_questions(generator);
                 break;
             }

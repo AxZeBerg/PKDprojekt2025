@@ -1,3 +1,8 @@
+import {
+    pair
+} from "../PKDprojekt2025/lib/list"
+
+
 export const Hints10_Sweden = ["This country had around 593 billion USD BNP last year", "A northern mining town in this country is being relocated",
                       "This country became a member of the EU in 1995", "This country have donated approximately 6,45 billion Euros worth of supplies to Ukraine",
                       "This country has over 200.000 islands"];

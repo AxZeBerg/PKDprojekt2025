@@ -2,7 +2,6 @@ import {
     pair, Pair
 } from "../lib/list";
     
-    
 const Hints10_Sweden = ["This country had around 593 billion USD BNP last year"];
 const Hints8_Sweden = ["Women could vote in this country 1919"];
 const Hints6_Sweden = ["The largest lake in this country is called Vänern"];
