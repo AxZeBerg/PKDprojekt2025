@@ -50,6 +50,7 @@ function country_questions(generator: Country) {
         if (input === tail(generator.section2[i])) {
             console.log("Correct!!");
             point++;
+            player_points = player_points + 1;
         }
         else {
             console.log("incorrect");
@@ -58,7 +59,7 @@ function country_questions(generator: Country) {
     };
     if (point === 3) {
         console.log("you got all 3 questions right, you get a bonus point");
-        player_points = player_points + point;
+        //player_points = player_points + point;
         player_points++;
         return player_points;
     }
