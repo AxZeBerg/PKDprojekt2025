@@ -49,7 +49,7 @@ function country_questions(generator: Country) {
         let input = prompt("What is your answer? ").toLocaleLowerCase();
         if (input === tail(generator.section2[i])) {
             console.log("Correct!!");
-            point = point + 1;
+            point++;
         }
         else {
             console.log("incorrect");
@@ -58,12 +58,14 @@ function country_questions(generator: Country) {
     };
     if (point === 3) {
         console.log("you got all 3 questions right, you get a bonus point");
-        point = point + 1;
-        return point;
+        player_points = player_points + point;
+        player_points++;
+        return player_points;
     }
     else{}
 }
 
+let player_points: number = 0;
 
 function make_leaderboard() {
     let array_length = currentcountry.players.length
@@ -102,6 +104,7 @@ function hints(generator: Country) {
                 if(answer === generator.name.toLowerCase()) {
                     console.log("Correct, well done!\n");
                     console.log("Now you will answer questions about the country\n");
+                    player_points = player_points + points;
                     country_questions(generator);
                     break;
                 //call section 2 function
@@ -121,6 +124,7 @@ function hints(generator: Country) {
             if(answer === generator.name.toLowerCase()) {
                 console.log("Correct, well done!\n");
                 console.log("Now you will answer questions about the country\n");
+                player_points = player_points + points;
                 country_questions(generator);
                 break;
             } else {
@@ -135,6 +139,7 @@ function hints(generator: Country) {
     currentcountry.players.push(new_user);
     make_leaderboard();
     console.log(currentcountry.leaderboard);
+    console.log(player_points);
 }
 menu();
 

@@ -35,10 +35,10 @@ function country_questions(generator) {
     var point = 0;
     for (var i = 0; i < 3; i = i + 1) {
         console.log((0, list_1.head)(generator.section2[i]));
-        var input = prompt("what is your answer? ").toLocaleLowerCase();
+        var input = prompt("What is your answer? ").toLocaleLowerCase();
         if (input === (0, list_1.tail)(generator.section2[i])) {
             console.log("Correct!!");
-            point = point + 1;
+            point++;
         }
         else {
             console.log("incorrect");
@@ -47,11 +47,13 @@ function country_questions(generator) {
     ;
     if (point === 3) {
         console.log("you got all 3 questions right, you get a bonus point");
-        point = point + 1;
-        return point;
+        player_points = player_points + point;
+        player_points++;
+        return player_points;
     }
     else { }
 }
+var player_points = 0;
 function make_leaderboard() {
     var array_length = currentcountry.players.length;
     for (var i = 0; i < array_length - 1; i = i + 1) {
@@ -87,6 +89,7 @@ function hints(generator) {
                 if (answer === generator.name.toLowerCase()) {
                     console.log("Correct, well done!\n");
                     console.log("Now you will answer questions about the country\n");
+                    player_points = player_points + points;
                     country_questions(generator);
                     break;
                     //call section 2 function
@@ -109,6 +112,7 @@ function hints(generator) {
             if (answer === generator.name.toLowerCase()) {
                 console.log("Correct, well done!\n");
                 console.log("Now you will answer questions about the country\n");
+                player_points = player_points + points;
                 country_questions(generator);
                 break;
             }
@@ -124,5 +128,6 @@ function hints(generator) {
     currentcountry.players.push(new_user);
     make_leaderboard();
     console.log(currentcountry.leaderboard);
+    console.log(player_points);
 }
 menu();
