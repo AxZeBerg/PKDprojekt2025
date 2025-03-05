@@ -4,6 +4,25 @@ var countries_1 = require("./countries");
 var list_1 = require("../PKDprojekt2025/lib/list");
 var PromptSync = require("prompt-sync");
 var prompt = PromptSync({ sigint: true });
+var figlet = require("figlet");
+function displayCountryName(name) {
+    var words = name.split(" ");
+    words.forEach(function (word) {
+        console.log(figlet.textSync(word, { horizontalLayout: "full" }));
+    });
+}
+// Example
+displayCountryName("Around the world");
+/**
+import * as figlet from "figlet";
+
+function displayCountryName(name: string) {
+    console.log(figlet.textSync(name, { horizontalLayout: "full" }));
+}
+
+// Example
+displayCountryName("Around the world");
+*/
 //tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
 function shuffleArray(array) {
     var _a;

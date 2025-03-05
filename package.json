@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/prompt-sync": "^4.2.3",
+    "figlet": "^1.8.0",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.7.0"
+  }
+}

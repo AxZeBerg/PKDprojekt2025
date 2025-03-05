@@ -9,7 +9,29 @@ import {
 import * as PromptSync from "prompt-sync";
 const prompt: PromptSync.Prompt = PromptSync({ sigint: true });
 
+import * as figlet from "figlet";
 
+function displayCountryName(name: string) {
+    const words = name.split(" ");
+    words.forEach(word => {
+        console.log(figlet.textSync(word, { horizontalLayout: "full" }));
+    });
+}
+
+// Example
+displayCountryName("Around the world");
+
+
+/** 
+import * as figlet from "figlet";
+
+function displayCountryName(name: string) {
+    console.log(figlet.textSync(name, { horizontalLayout: "full" }));
+}
+
+// Example
+displayCountryName("Around the world");
+*/
 //tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
 function shuffleArray<T>(array: T[]):T[] { 
     for (let i = array.length - 1; i > 0; i--) { 
