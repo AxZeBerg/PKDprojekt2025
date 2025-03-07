@@ -4,6 +4,7 @@ var countries_1 = require("./countries");
 var list_1 = require("../PKDprojekt2025/lib/list");
 var PromptSync = require("prompt-sync");
 var prompt = PromptSync({ sigint: true });
+var csv_1 = require("../PKDprojekt2025/csv");
 //tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
 function shuffleArray(array) {
     var _a;
@@ -16,11 +17,17 @@ function shuffleArray(array) {
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
-function generate_country(countries) {
-    var Random_Country = getRandomInt(2);
-    return countries_1.Array_countries[Random_Country];
+function shuffle_countries(countries) {
+    var shuffeled_array = shuffleArray(countries);
+    return shuffeled_array;
 }
-var currentcountry = generate_country(countries_1.Array_countries);
+//function generate_country(countries: Array<Country>): Country {
+//    const Random_Country = getRandomInt(3);
+//    return Array_countries[Random_Country]
+//}
+var shuffeled_array = shuffle_countries(countries_1.Array_countries);
+var current_index = 0;
+var currentcountry = shuffeled_array[current_index];
 // funktion för att starta spelet 
 function menu() {
     console.log("Welcome to Around the world!\n");
@@ -34,20 +41,20 @@ function country_questions(generator) {
     var frågor = shuffleArray(generator.section2);
     var point = 0;
     for (var i = 0; i < 3; i = i + 1) {
-        console.log((0, list_1.head)(generator.section2[i]));
+        console.log((0, list_1.head)(frågor[i]));
         var input = prompt("What is your answer? ").toLocaleLowerCase();
-        if (input === (0, list_1.tail)(generator.section2[i])) {
-            console.log("Correct!!");
+        if (input === (0, list_1.tail)(frågor[i])) {
+            console.log("Correct!!\n");
             point++;
             player_points = player_points + 1;
         }
         else {
-            console.log("incorrect");
+            console.log("incorrect\n");
         }
     }
     ;
     if (point === 3) {
-        console.log("you got all 3 questions right, you get a bonus point");
+        console.log("you got all 3 questions right, you get a bonus point\n");
         //player_points = player_points + point;
         player_points++;
         return player_points;
@@ -55,31 +62,14 @@ function country_questions(generator) {
     else { }
 }
 var player_points = 0;
-function make_leaderboard() {
-    var array_length = currentcountry.players.length;
-    for (var i = 0; i < array_length - 1; i = i + 1) {
-        for (var j = 0; j < array_length - 1 - i; j = j + 1) {
-            if ((0, list_1.tail)(currentcountry.players[j]) < (0, list_1.tail)(currentcountry.players[j + 1])) {
-                // Byt plats på spelarna om den senare har högre poäng
-                var temporary = currentcountry.players[j];
-                currentcountry.players[j] = currentcountry.players[j + 1];
-                currentcountry.players[j + 1] = temporary;
-            }
-        }
-    }
-    // Uppdatera leaderboard med spelarnas namn i ordning
-    currentcountry.leaderboard = [];
-    for (var i = 0; i < array_length; i = i + 1) {
-        currentcountry.leaderboard.push((0, list_1.head)(currentcountry.players[i]));
-    }
-}
 function hints(generator) {
     var user = prompt("What’s your name? ");
     console.log("");
     var points = 10;
+    player_points = 0;
     var hint_array = generator.section1;
     for (var i = 0; i < 5; i = i + 1) {
-        var random_hint = getRandomInt(4);
+        var random_hint = getRandomInt(5);
         console.log(hint_array[i][random_hint]);
         console.log("");
         if (i < 4) {
@@ -125,10 +115,18 @@ function hints(generator) {
             }
         }
     }
-    var new_user = (0, list_1.pair)(user, points);
-    currentcountry.players.push(new_user);
-    make_leaderboard();
-    console.log(currentcountry.leaderboard);
-    console.log(player_points);
+    console.log("The game is now over, well played! you got ".concat(player_points, " points"));
+    (0, csv_1.update_leaderboard)(currentcountry.country_code, user, player_points.toString(), currentcountry.name); //knas await
+    console.log("");
+    var replay = prompt("Do you want to play again (yes or no)? ").toLowerCase();
+    console.log("");
+    if (replay === "yes") {
+        current_index = current_index + 1;
+        currentcountry = shuffeled_array[current_index];
+        return hints(currentcountry);
+    }
+    else {
+        console.log("Ok, welcome back any time!");
+    }
 }
 menu();

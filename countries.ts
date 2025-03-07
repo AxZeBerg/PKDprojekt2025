@@ -14,32 +14,28 @@ export type Country = {
     name: string
     section1 : Array<Array<string>>, //stort eller litet s?
     section2: Array<Pair<string, string>>,
-    players: Array<Pair<string, number>>,
-    leaderboard: Array<String> //kanske stack?
+    country_code: string
 };
     
 export const Sweden: Country = {
     name: "Sweden",
     section1: [Hints10_Sweden, Hints8_Sweden, Hints6_Sweden, Hints4_Sweden, Hints2_Sweden],
     section2: Questions_Sweden,
-    players: [pair("Albert", 0)],
-    leaderboard: []
+    country_code: "LBSV"
 };
     
 export const Germany: Country = {
     name: "Germany",
     section1: [Hints10_Germany, Hints8_Germany, Hints6_Germany, Hints4_Germany, Hints2_Germany],
     section2: Questions_Germany,
-    players: [pair("Albert", 16), pair("Ida", 14), pair("axeL", 3)],
-    leaderboard: ["Albert", "Ida", "axeL"]
+    country_code: "LBGE"
 };
 
 export const New_Zealand: Country = {
     name: "New Zealand",
     section1: [Hints10_NewZealand, Hints8_NewZealand, Hints6_NewZealand, Hints4_NewZealand, Hints2_NewZealand],
     section2: Questions_NewZealand,
-    players: [pair("Albert", 16), pair("Ida", 14), pair("axeL", 3)],
-    leaderboard: ["Albert", "Ida", "axeL"]
+    country_code: "LBNZ"
 };
     
-export const Array_countries: Array<Country> = [Sweden, Germany];
+export const Array_countries: Array<Country> = [Sweden, Germany, New_Zealand];
