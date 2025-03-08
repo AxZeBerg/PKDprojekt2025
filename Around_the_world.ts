@@ -24,10 +24,21 @@ function shuffleArray<T>(array: T[]):T[] {
   }
 
 
+/**
+* Generates a random number
+* @precondition Must be a integer
+* @param Number is a integer
+* @return Returns a random number between 0 and the chosen integer
+*/
 function getRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
 }
 
+/**
+ * Shuffles the array of countries
+ * @param countries an array of the diffrent countries
+ * @returns A shuffled array of counties
+ */
 function shuffle_countries(countries: Array<Country>): Array<Country> {
     const shuffeled_array = shuffleArray(countries);
     return shuffeled_array
@@ -37,8 +48,12 @@ let shuffeled_array = shuffle_countries(Array_countries);
 let current_index = 0
 let currentcountry = shuffeled_array[current_index]
 
-// funktion för att starta spelet 
 
+/**
+ * Function to start the game
+ * @param () no parametres
+ * returns {void}
+ */
 function menu() {
     console.log("Welcome to Around the world!\n");
     let input = prompt("Are you ready to play? (yes/no): ");
@@ -48,6 +63,11 @@ function menu() {
     }
 }
 
+/**
+ * Displays the questions after guessing the country
+ * @param generator a generated country
+ * @returns Returns the points after answering the questions
+ */
 function country_questions(generator: Country) {
     const frågor = shuffleArray(generator.section2);
     let point: number = 0
@@ -75,7 +95,11 @@ function country_questions(generator: Country) {
 
 let player_points: number = 0;
 
-
+/**
+ * Runs most of the game, gives the hints about the country
+ * @param generator a generated country
+ * @returns void
+ */
 function hints(generator: Country) {
     let user = prompt("What’s your name? ");
     console.log("");
