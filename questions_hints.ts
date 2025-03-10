@@ -82,3 +82,349 @@ export const Questions_NewZealand = [pair("What city in New Zealand is home to t
                               pair("What city is the great Ernest Rutherford from?", "nelson"),  
                               pair("What is the name of the trilogy that was filmed in New Zealand and made the country a tourism hotspot?", "lord of the rings")  
 ];
+
+export const Hints10_Brazil = [
+    "This country had around 1.8 trillion USD GDP last year",
+    "It is the largest country in South America by area",
+    "It hosted the FIFA World Cup in 2014",
+    "It hosted the Summer Olympics in 2016",
+    "The country is famous for its annual Carnival festival"
+  ];
+  
+  export const Hints8_Brazil = [
+    "Women gained the right to vote in this country in 1932",
+    "This country is home to the largest tropical rainforest in the world",
+    "A traditional Brazilian martial art, capoeira, originated here",
+    "This country boasts over 7,000 km of stunning coastline",
+    "Portuguese is the official language of this country"
+  ];
+  
+  export const Hints6_Brazil = [
+    "The Amazon River, one of the longest rivers in the world, flows through this country",
+    "The iconic Christ the Redeemer statue overlooks Rio de Janeiro",
+    "The Brazilian national football team has won the FIFA World Cup 5 times",
+    "São Paulo is one of the most populous cities in the world",
+    "This country is renowned for its rich biodiversity and cultural heritage"
+  ];
+  
+  export const Hints4_Brazil = [
+    "The world-famous Carnival festival is celebrated with elaborate parades in this country",
+    "Legendary footballer Pelé was born in this country",
+    "This country’s flag features a green field with a yellow diamond and a blue globe",
+    "A popular cocktail, Caipirinha, originated in this country",
+    "Brazil is the largest country in both South America and Latin America"
+  ];
+  
+  export const Hints2_Brazil = [
+    "Brasília is the capital city of this country",
+    "This country shares borders with nearly every South American nation",
+    "Brazil is the only country in the Americas with Portuguese as its official language",
+    "The Amazon rainforest covers a significant portion of this country",
+    "Its national football team holds a record 5 World Cup titles"
+  ];
+  
+  export const Questions_Brazil = [
+    pair("What is the capital of Brazil?", "brasília"),
+    pair("Which Brazilian city is famous for the Christ the Redeemer statue?", "rio de janeiro"),
+    pair("How many times has Brazil won the FIFA World Cup?", "5"),
+    pair("Which city is known as the economic hub of Brazil?", "sao paulo"),
+    pair("What is the official language of Brazil?", "portuguese"),
+    pair("Which annual festival in Brazil is celebrated with vibrant parades and samba music?", "carnival")
+  ];
+
+  export const Hints10_Italy = [
+    "This country had around 2 trillion USD GDP last year",
+    "It is home to the Eternal City, Rome, filled with ancient history and landmarks",
+    "This country is the birthplace of the Renaissance, nurturing masters like Leonardo and Michelangelo",
+    "It is world-renowned for its culinary traditions including pizza, pasta, and gelato",
+    "From Alpine peaks to Mediterranean coasts, this country offers diverse landscapes"
+  ];
+  
+  export const Hints8_Italy = [
+    "Women gained the right to vote in this country in 1946",
+    "It is famed for its ancient ruins such as the Colosseum in Rome",
+    "Active volcanoes like Mount Etna are a significant natural feature here",
+    "Its fashion capital, Milan, highlights its global influence in style",
+    "Italian cuisine, rich in tradition, has captured palates around the world"
+  ];
+  
+  export const Hints6_Italy = [
+    "The longest river in this country is the Po, flowing across the north",
+    "It is celebrated for its art and architecture, with treasures in the Vatican Museums",
+    "The Leaning Tower of Pisa is one of its most iconic landmarks",
+    "It hosts the prestigious Venice Film Festival every year",
+    "This country is a key stop in the Formula 1 Italian Grand Prix"
+  ];
+  
+  export const Hints4_Italy = [
+    "Rome, known as the Eternal City, is a historic centerpiece of this country",
+    "Famous explorer Christopher Columbus was born in Genoa, one of its notable cities",
+    "Its flag features green, white, and red vertical stripes",
+    "Venice, with its unique network of canals, is celebrated worldwide",
+    "Italy is a founding member of the European Union"
+  ];
+  
+  export const Hints2_Italy = [
+    "The capital of this country is Rome",
+    "It shares borders with France, Switzerland, Austria, and Slovenia",
+    "Italian is the official language",
+    "This country is renowned for its art, architecture, and culinary heritage",
+    "Opera and classical music are integral parts of its cultural identity"
+  ];
+  
+  export const Questions_Italy = [
+    pair("What is the capital of Italy?", "rome"),
+    pair("Which Italian city is famous for its canals and gondolas?", "venice"),
+    pair("In which city can you visit the Leaning Tower?", "pisa"),
+    pair("Which traditional dish from Naples is celebrated worldwide?", "pizza"),
+    pair("Which famous explorer from Genoa is credited with discovering America?", "columbus"),
+    pair("What is the name of the luxury sports car manufacturer based in Maranello?", "ferrari")
+  ];
+
+  export const Hints10_India = [
+    "This country had around 3 trillion USD GDP last year",
+    "It is the world's largest democracy with over a billion people",
+    "Home to ancient civilizations like the Indus Valley Civilization",
+    "It is renowned for its diverse cultures, languages, and religions",
+    "The country is famous for its spices, Bollywood films, and historical landmarks"
+  ];
+  
+  export const Hints8_India = [
+    "Women gained the right to vote in this country shortly after independence in 1947",
+    "Yoga and Ayurveda, traditional practices, originated here",
+    "It hosts one of the world's largest film industries, commonly known as Bollywood",
+    "This country has a wide range of climates from the Himalayan cold to tropical heat",
+    "It is celebrated for its classical music, dance forms, and rich arts heritage"
+  ];
+  
+  export const Hints6_India = [
+    "The sacred Ganges River flows through this country, playing a vital cultural role",
+    "The Taj Mahal, an iconic symbol of love, is located here",
+    "Cricket is the most popular sport, uniting millions across the nation",
+    "This country is rapidly growing in technology and innovation sectors",
+    "It blends modern urban life with ancient traditions and rural landscapes"
+  ];
+  
+  export const Hints4_India = [
+    "New Delhi is the capital city of this country",
+    "The national flag features deep saffron, white, and green with a blue Ashoka Chakra",
+    "It gained independence from British rule in 1947",
+    "Indian cuisine is celebrated globally for its bold flavors and spices",
+    "It is home to a wealth of UNESCO World Heritage Sites, including historic monuments"
+  ];
+  
+  export const Hints2_India = [
+    "The capital of this country is New Delhi",
+    "It shares borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar",
+    "Hindi and English are widely used official languages",
+    "It is the second-most populous country in the world",
+    "The national emblem features the Lion Capital of Ashoka"
+  ];
+  
+  export const Questions_India = [
+    pair("What is the capital of India?", "new delhi"),
+    pair("Which iconic monument in India is known as a symbol of eternal love?", "taj mahal"),
+    pair("What is the most popular sport in India?", "cricket"),
+    pair("Which sacred river is highly revered in India?", "ganges"),
+    pair("In which year did India gain independence from British rule?", "1947"),
+    pair("What is the name of India's massive film industry?", "bollywood")
+  ];
+
+  export const Hints10_Japan = [
+    "This country had around 5 trillion USD GDP last year",
+    "It is an island nation in East Asia, famously known as the Land of the Rising Sun",
+    "This country is a global leader in technology, automobiles, and robotics",
+    "It hosted the Summer Olympics in 1964 and again in 2020",
+    "Ancient traditions blend with modern innovation across its bustling cities"
+  ];
+  
+  export const Hints8_Japan = [
+    "Women gained the right to vote in this country in 1945",
+    "The annual Cherry Blossom (Sakura) season is celebrated with festivals nationwide",
+    "Traditional martial arts like judo, karate, and sumo are deeply rooted in its culture",
+    "Japanese cuisine, including sushi, ramen, and tempura, is celebrated around the world",
+    "Its extensive public transportation network features the famous Shinkansen bullet trains"
+  ];
+  
+  export const Hints6_Japan = [
+    "Mount Fuji, an iconic symbol of the country, is its highest peak",
+    "Tokyo, the capital, is one of the world's most populous metropolitan areas",
+    "This country is renowned for its innovations in consumer electronics and automobiles",
+    "It is a pioneer in robotics and high-speed rail technology",
+    "It hosted the Rugby World Cup in 2019, marking its international sports influence"
+  ];
+  
+  export const Hints4_Japan = [
+    "Tokyo, the capital, epitomizes a blend of futuristic technology and traditional culture",
+    "Global giants like Nintendo and Sony originated in this country",
+    "Its flag features a red circle on a white background symbolizing the rising sun",
+    "Traditional sumo wrestling remains an important cultural sport here",
+    "Ancient Shinto shrines and Buddhist temples are found throughout the country"
+  ];
+  
+  export const Hints2_Japan = [
+    "Tokyo is the capital of this country",
+    "It is made up of four main islands: Honshu, Hokkaido, Kyushu, and Shikoku",
+    "Japanese is the official language",
+    "This country uniquely blends modern technology with centuries-old traditions",
+    "Its Shinkansen bullet trains are renowned for their speed and efficiency"
+  ];
+  
+  export const Questions_Japan = [
+    pair("What is the capital of Japan?", "tokyo"),
+    pair("What is the name of the iconic mountain that symbolizes Japan?", "mount fuji"),
+    pair("Which traditional sport involving wrestlers is a cultural staple in Japan?", "sumo"),
+    pair("Which company, famous for its video games and consoles, originated in Japan?", "nintendo"),
+    pair("What is the name of Japan's high-speed bullet train network?", "shinkansen"),
+    pair("Which city, known for its historic temples and geisha culture, is often called Japan's cultural capital?", "kyoto")
+  ];
+
+  export const Hints10_Egypt = [
+    "This country had around 300 billion USD GDP last year",
+    "It is home to one of the world's earliest and most influential civilizations",
+    "Ancient monuments like the Pyramids of Giza and the Great Sphinx attract millions of tourists",
+    "The fertile Nile River flows through this country, sustaining its agriculture and culture",
+    "This country is a cultural bridge between Africa and the Middle East"
+  ];
+  
+  export const Hints8_Egypt = [
+    "Women gained the right to vote in this country in 1956",
+    "The ancient hieroglyphs, a unique writing system, originated here",
+    "This country features vast deserts, including parts of the Sahara",
+    "It is famous for its traditional belly dancing and music",
+    "Egyptian cuisine is celebrated for dishes like koshari and ful medames"
+  ];
+  
+  export const Hints6_Egypt = [
+    "The Nile Delta is one of the most fertile regions in this country",
+    "The Egyptian Museum in Cairo houses an extensive collection of ancient artifacts",
+    "Cairo, its capital, is one of the largest cities in Africa and the Middle East",
+    "This country made significant contributions to mathematics, astronomy, and architecture in ancient times",
+    "The annual Sphinx Festival celebrates its rich cultural heritage"
+  ];
+  
+  export const Hints4_Egypt = [
+    "The Great Pyramids of Giza are among its most famous landmarks",
+    "The tomb of pharaoh Tutankhamun is one of the most significant archaeological discoveries here",
+    "This country's flag features red, white, and black with a golden eagle emblem",
+    "The historic city of Alexandria was founded by Alexander the Great",
+    "Islam is the predominant religion in this country"
+  ];
+  
+  export const Hints2_Egypt = [
+    "Cairo is the capital of this country",
+    "The Nile River is the lifeblood of this country",
+    "Egypt is located in Northeast Africa and extends into Asia with the Sinai Peninsula",
+    "Arabic is the official language of this country",
+    "This country is renowned for its ancient civilization and monumental history"
+  ];
+  
+  export const Questions_Egypt = [
+    pair("What is the capital of Egypt?", "cairo"),
+    pair("Which ancient structure in Egypt is considered one of the Seven Wonders of the Ancient World?", "pyramids of giza"),
+    pair("What major river flows through Egypt?", "nile"),
+    pair("Which pharaoh's tomb was famously discovered in 1922?", "tutankhamun"),
+    pair("What is the official language of Egypt?", "arabic"),
+    pair("Which ancient writing system, featuring symbols and pictures, was used in Egypt?", "hieroglyphs")
+  ];
+
+  export const Hints10_Canada = [
+    "This country had around 1.6 trillion USD GDP last year",
+    "It is the second largest country in the world by land area",
+    "Known for its multicultural cities and vast natural landscapes",
+    "Home to the longest coastline in the world, stretching along three oceans",
+    "It hosted the 2010 Winter Olympics in Vancouver"
+  ];
+  
+  export const Hints8_Canada = [
+    "Women gained the right to vote in this country starting in the early 20th century",
+    "Canada has two official languages: English and French",
+    "Maple syrup is a cherished symbol and major export of this country",
+    "Ice hockey is considered the national winter sport",
+    "This country is renowned for its friendly and polite citizens"
+  ];
+  
+  export const Hints6_Canada = [
+    "Ottawa is the capital city of this country",
+    "Toronto is its largest city and a major financial hub",
+    "It boasts extensive national parks and pristine wilderness",
+    "Ice hockey is deeply embedded in its cultural identity",
+    "The maple leaf, featured on its flag, is a national emblem"
+  ];
+  
+  export const Hints4_Canada = [
+    "The national flag prominently displays a red maple leaf",
+    "Canada is a constitutional monarchy and a member of the Commonwealth",
+    "Ottawa, its capital, is home to historic Parliament Hill",
+    "It shares the world's longest undefended border with the United States",
+    "The country is celebrated for its breathtaking natural beauty"
+  ];
+  
+  export const Hints2_Canada = [
+    "Ottawa is the capital of Canada",
+    "It shares the longest undefended border with the United States",
+    "English and French are its two official languages",
+    "The maple leaf is a key symbol on its flag",
+    "The beaver is recognized as a national symbol"
+  ];
+  
+  export const Questions_Canada = [
+    pair("What is the capital of Canada?", "ottawa"),
+    pair("Which country shares the longest undefended border with Canada?", "united states"),
+    pair("What winter sport is most associated with Canada?", "ice hockey"),
+    pair("Which tree leaf is prominently featured on the Canadian flag?", "maple"),
+    pair("What is the largest city in Canada?", "toronto"),
+    pair("What animal is recognized as a national symbol of Canada?", "beaver")
+  ];
+
+  export const Hints10_Australia = [
+    "This country had around 1.4 trillion USD GDP last year",
+    "It is the world's sixth-largest country by land area",
+    "It is home to unique natural wonders like the Great Barrier Reef and the Outback",
+    "It hosted the 2000 Summer Olympics in Sydney",
+    "This country is both a nation and a continent with diverse ecosystems"
+  ];
+  
+  export const Hints8_Australia = [
+    "Women gained the right to vote in Australia in the early 20th century",
+    "It is famous for its unique marsupials like kangaroos and koalas",
+    "The country's indigenous culture dates back tens of thousands of years",
+    "Its cities offer a mix of modern architecture and natural landscapes",
+    "It is surrounded by the Indian and Pacific Oceans, contributing to its island culture"
+  ];
+  
+  export const Hints6_Australia = [
+    "The Murray River is one of the longest rivers in the country",
+    "Sydney is a major global city known for its harbour and landmarks",
+    "The country is famous for its vast deserts and rugged Outback",
+    "Its beaches are popular for surfing and recreational activities",
+    "The unique wildlife, including the emu and platypus, sets it apart"
+  ];
+  
+  export const Hints4_Australia = [
+    "The Sydney Opera House is an iconic symbol of the country",
+    "Melbourne is known as a cultural and sporting hub",
+    "The national flag features the Union Jack and the Southern Cross constellation",
+    "Aboriginal heritage plays a crucial role in the country's identity",
+    "The country's culinary scene is diverse, reflecting its multicultural society"
+  ];
+  
+  export const Hints2_Australia = [
+    "Canberra is the capital of Australia",
+    "Australia is the only country that is also a continent",
+    "English is the official language of the country",
+    "It is renowned for its distinct natural landscapes like the Outback",
+    "The country is located in the southern hemisphere, surrounded by vast oceans"
+  ];
+  
+  export const Questions_Australia = [
+    pair("What is the capital of Australia?", "canberra"),
+    pair("Which iconic structure is located in Sydney?", "sydney opera house"),
+    pair("What is the name of the world's largest coral reef system found in Australia?", "great barrier reef"),
+    pair("Which animal is a national symbol of Australia?", "kangaroo"),
+    pair("Which city hosted the 2000 Summer Olympics?", "sydney"),
+    pair("What is the name of the vast, arid region covering much of Australia's interior?", "outback")
+  ];
+  
+  
+  
