@@ -1,10 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.player_points = void 0;
+exports.shuffleArray = shuffleArray;
+exports.getRandomInt = getRandomInt;
+exports.shuffle_countries = shuffle_countries;
+exports.menu = menu;
+exports.country_questions = country_questions;
+exports.hints = hints;
 var countries_1 = require("./countries");
 var list_1 = require("../PKDprojekt2025/lib/list");
 var PromptSync = require("prompt-sync");
 var prompt = PromptSync({ sigint: true });
 var csv_1 = require("../PKDprojekt2025/csv");
+var figlet = require("figlet");
+function display_Menu(name) {
+    var words = name.split(" ");
+    words.forEach(function (word) {
+        console.log(figlet.textSync(word, { horizontalLayout: "full" }));
+    });
+}
+// Example
+display_Menu("Around the world");
 //tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
 function shuffleArray(array) {
     var _a;
@@ -62,7 +78,7 @@ function country_questions(generator) {
         if (input === (0, list_1.tail)(frågor[i])) {
             console.log("Correct!!\n");
             point++;
-            player_points = player_points + 1;
+            exports.player_points = exports.player_points + 1;
         }
         else {
             console.log("incorrect\n");
@@ -72,12 +88,12 @@ function country_questions(generator) {
     if (point === 3) {
         console.log("you got all 3 questions right, you get a bonus point\n");
         //player_points = player_points + point;
-        player_points++;
-        return player_points;
+        exports.player_points++;
+        return exports.player_points;
     }
     else { }
 }
-var player_points = 0;
+exports.player_points = 0;
 /**
  * Runs most of the game, gives the hints about the country
  * @param generator a generated country
@@ -87,7 +103,7 @@ function hints(generator) {
     var user = prompt("What’s your name? ");
     console.log("");
     var points = 10;
-    player_points = 0;
+    exports.player_points = 0;
     var hint_array = generator.section1;
     for (var i = 0; i < 5; i = i + 1) {
         var random_hint = getRandomInt(5);
@@ -101,7 +117,7 @@ function hints(generator) {
                 if (answer === generator.name.toLowerCase()) {
                     console.log("Correct, well done!\n");
                     console.log("Now you will answer questions about the country\n");
-                    player_points = player_points + points;
+                    exports.player_points = exports.player_points + points;
                     country_questions(generator);
                     break;
                     //call section 2 function
@@ -124,7 +140,7 @@ function hints(generator) {
             if (answer === generator.name.toLowerCase()) {
                 console.log("Correct, well done!\n");
                 console.log("Now you will answer questions about the country\n");
-                player_points = player_points + points;
+                exports.player_points = exports.player_points + points;
                 country_questions(generator);
                 break;
             }
@@ -136,8 +152,8 @@ function hints(generator) {
             }
         }
     }
-    console.log("The game is now over, well played! you got ".concat(player_points, " points"));
-    (0, csv_1.update_leaderboard)(currentcountry.country_code, user, player_points.toString(), currentcountry.name); //knas await
+    console.log("The game is now over, well played! you got ".concat(exports.player_points, " points"));
+    (0, csv_1.update_leaderboard)(currentcountry.country_code, user, exports.player_points.toString(), currentcountry.name); //knas await
     console.log("");
     var replay = prompt("Do you want to play again (yes or no)? ").toLowerCase();
     console.log("");

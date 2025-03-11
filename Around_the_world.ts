@@ -13,9 +13,22 @@ import {
     update_leaderboard
 } from "../PKDprojekt2025/csv"; 
 
+import * as figlet from "figlet";
+
+function display_Menu(name: string) {
+    const words = name.split(" ");
+    words.forEach(word => {
+        console.log(figlet.textSync(word, { horizontalLayout: "full" }));
+    });
+}
+
+// Example
+display_Menu("Around the world");
+
+
 
 //tagen från https://www.quora.com/How-do-you-shuffle-an-array-of-items-using-JavaScript-or-TypeScript
-function shuffleArray<T>(array: T[]):T[] { 
+export function shuffleArray<T>(array: T[]):T[] { 
     for (let i = array.length - 1; i > 0; i--) { 
       const j = Math.floor(Math.random() * (i + 1)); 
       [array[i], array[j]] = [array[j], array[i]]; 
@@ -30,7 +43,7 @@ function shuffleArray<T>(array: T[]):T[] {
 * @param Number is a integer
 * @return Returns a random number between 0 and the chosen integer
 */
-function getRandomInt(max: number): number {
+export function getRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
 }
 
@@ -39,7 +52,7 @@ function getRandomInt(max: number): number {
  * @param countries an array of the diffrent countries
  * @returns A shuffled array of counties
  */
-function shuffle_countries(countries: Array<Country>): Array<Country> {
+export function shuffle_countries(countries: Array<Country>): Array<Country> {
     const shuffeled_array = shuffleArray(countries);
     return shuffeled_array
 }
@@ -54,7 +67,7 @@ let currentcountry = shuffeled_array[current_index]
  * @param () no parametres
  * returns {void}
  */
-function menu() {
+ export function menu() {
     console.log("Welcome to Around the world!\n");
     let input = prompt("Are you ready to play? (yes/no): ");
     console.log("");
@@ -68,7 +81,7 @@ function menu() {
  * @param generator a generated country
  * @returns Returns the points after answering the questions
  */
-function country_questions(generator: Country) {
+export function country_questions(generator: Country) {
     const frågor = shuffleArray(generator.section2);
     let point: number = 0
     for(let i = 0; i < 3; i = i + 1) {
@@ -93,14 +106,14 @@ function country_questions(generator: Country) {
     else{}
 }
 
-let player_points: number = 0;
+export let player_points: number = 0;
 
 /**
  * Runs most of the game, gives the hints about the country
  * @param generator a generated country
  * @returns void
  */
-function hints(generator: Country) {
+export function hints(generator: Country) {
     let user = prompt("What’s your name? ");
     console.log("");
 
